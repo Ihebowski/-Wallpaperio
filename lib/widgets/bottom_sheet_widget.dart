@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/file.dart';
 import 'package:flutter_wallpaper_manager/flutter_wallpaper_manager.dart';
@@ -16,7 +14,6 @@ class BottomSheetWidget extends StatelessWidget {
       width: width,
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
       decoration: BoxDecoration(
-        // ignore: deprecated_member_use
         color: Theme.of(context).backgroundColor,
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(25.0),

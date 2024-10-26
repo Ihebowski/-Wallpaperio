@@ -5,7 +5,6 @@ import 'package:wallpaper_app/constants/app_colors.dart';
 import 'package:wallpaper_app/models/image_modal.dart';
 import 'package:wallpaper_app/widgets/bottom_sheet_widget.dart';
 
-// ignore: must_be_immutable
 class ImagePage extends StatefulWidget {
   final Photo photo;
   bool _likedImage = false;
@@ -13,7 +12,6 @@ class ImagePage extends StatefulWidget {
   ImagePage({Key? key, required this.photo}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _ImagePageState createState() => _ImagePageState();
 }
 
@@ -86,27 +84,24 @@ class _ImagePageState extends State<ImagePage> {
                       onPressed: () async {
                         var file = await DefaultCacheManager()
                             .getSingleFile(widget.photo.src!.portrait);
-                        // ignore: use_build_context_synchronously
                         showBottomSheet(
                           context: context,
                           builder: (context) => BottomSheetWidget(file: file),
                           backgroundColor: Colors.transparent,
                         );
                       },
-                      // ignore: sort_child_properties_last
                       child: Text(
                         "Download",
                         style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.bold,
-                          // ignore: deprecated_member_use
                           color: Theme.of(context).textTheme.button!.color,
                         ),
                       ),
                       style: ButtonStyle(
                         elevation: MaterialStateProperty.all(0.0),
-                        // backgroundColor: MaterialStateProperty.all(
-                        //     Theme.of(context).accentColor),
+                        backgroundColor: MaterialStateProperty.all(
+                            Theme.of(context).accentColor),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
@@ -122,7 +117,6 @@ class _ImagePageState extends State<ImagePage> {
                         widget._likedImage = true;
                       });
                     },
-                    // ignore: sort_child_properties_last
                     child: Icon(
                       widget._likedImage
                           ? Icons.favorite

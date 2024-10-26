@@ -7,7 +7,6 @@ class ThemeSwitch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: no_leading_underscores_for_local_identifiers
     final _themeProvider = Provider.of<ThemeProvider>(context);
     return Switch.adaptive(
       value: _themeProvider.isDark,

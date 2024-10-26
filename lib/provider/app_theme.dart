@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/constants/app_colors.dart';
 
@@ -51,7 +49,7 @@ class AppTheme {
 
     //Other Colors
     primaryColor: blackColor,
-    // accentColor: lightBackgroundColor,
+    accentColor: lightBackgroundColor,
     backgroundColor: darkerLightBackgroundColor,
 
     //AppBar
@@ -117,7 +115,7 @@ class AppTheme {
 
     //Other Colors
     primaryColor: whiteColor,
-    // accentColor: darkBackgroundColor,
+    accentColor: darkBackgroundColor,
     backgroundColor: lighterDarkBackgroundColor,
 
     //AppBar

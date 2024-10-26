@@ -11,7 +11,6 @@ class DisplayPage extends StatefulWidget {
   const DisplayPage({Key? key, required this.topic}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _DisplayPageState createState() => _DisplayPageState();
 }
 

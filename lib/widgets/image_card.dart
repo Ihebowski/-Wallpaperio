@@ -1,16 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaper_app/constants/app_colors.dart';
 import 'package:wallpaper_app/models/image_modal.dart';
 import 'package:wallpaper_app/pages/image_page.dart';
 
-// ignore: must_be_immutable
 class ImageCard extends StatefulWidget {
   late Photo photo;
 
   ImageCard({Key? key, required this.photo}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _ImageCardState createState() => _ImageCardState();
 }
 
@@ -34,7 +34,7 @@ class _ImageCardState extends State<ImageCard> {
           height: 270,
           placeholder: (context, url) => Center(
             child: Container(
-              color: Theme.of(context).colorScheme.background,
+              color: Theme.of(context).backgroundColor,
             ),
           ),
           errorWidget: (context, url, error) => const Center(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:wallpaper_app/pages/explore_page.dart';
 import 'package:wallpaper_app/pages/favorite_page.dart';
 import 'package:wallpaper_app/pages/profile_page.dart';
@@ -9,7 +10,6 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _HomePageState createState() => _HomePageState();
 }
 
@@ -42,7 +42,6 @@ class _HomePageState extends State<HomePage> {
         elevation: 0.0,
         title: Text(
           "Wallpaper",
-          // ignore: deprecated_member_use
           style: Theme.of(context).textTheme.headline1,
         ),
         actions: const [
@@ -89,7 +88,6 @@ class _HomePageState extends State<HomePage> {
                   color: Theme.of(context).primaryColor,
                 ),
                 filled: true,
-                // ignore: deprecated_member_use
                 fillColor: Theme.of(context).backgroundColor,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
